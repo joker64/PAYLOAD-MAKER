@@ -11,8 +11,10 @@ Genrating  PAYLOAD  Automatically for Windows & Android [*]For Now[*]
         <td> Rolling / Sana</td>
     </tr>
 </table>
+
 # Installing :
 Open terminal then : git clone https://github.com/joker64/PAYLOAD-MAKER.git 
+
 # How To Use :
 go to the directory of PAYLOAD-MAKER & open terminal
 then : ruby PAYLOAD.rb & Chose the type of payload 
