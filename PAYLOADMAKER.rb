@@ -13,7 +13,11 @@ puts banner
 
 # banner in the Banner file
 
-puts "                                               By JOKER64   v1.0        "
+puts "                                               By JOKER64 / yousef hosam        "
+
+# Version
+
+puts "                                                                           v1.0   "
 
 
 puts "1)Windows/metepreter/reverse_tcp "
